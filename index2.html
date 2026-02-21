@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discrepancy Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex justify-center items-start p-6">
+
+  <div class="max-w-3xl w-ful h-lvh bg-white rounded-xl shadow-lg p-8">
+
+    <h1 class="text-2xl font-bold text-gray-800 mb-2">
+      Discrepancy Analysis Result
+    </h1>
+
+    <p class="text-gray-600 mb-6">
+      We found the following issues in your medical bill:
+    </p>
+
+    <div class="space-y-4">
+
+      
+      <div class="border border-red-200 bg-red-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-red-700">
+          1. Duplicate Charge - CBC Blood Test
+        </h3>
+        <p class="text-red-600 text-sm mt-2">
+          The Complete Blood Count (CBC) test has been billed twice on the same date, which is typically a billing duplication error.
+        </p>
+      </div>
+
+      
+      <div class="border border-red-200 bg-red-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-red-700">
+          2. Overcharge - Paracetamol 650mg
+        </h3>
+        <p class="text-red-600 text-sm mt-2">
+          Paracetamol 650mg has been billed at a significantly higher rate than the standard hospital pharmacy pricing.
+        </p>
+      </div>
+
+      
+      <div class="border border-red-200 bg-red-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-red-700">
+          3. Unnecessary Medication - Pantoprazole Injection
+        </h3>
+        <p class="text-red-600 text-sm mt-2">
+          Pantoprazole injection has been billed, but there is no mention of gastric complications in the medical report.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mt-8 text-right ">
+      <button
+        id="generateEmailBtn"
+        class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700"
+      >
+        Generate Email to Hospital
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>
